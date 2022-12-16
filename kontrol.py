@@ -24,8 +24,11 @@ class GoodIfrit:
     def vozvr(self, arg):
         print(arg * self.goodness // self.visota)
 
-    def vsvod(self):
-        print(f'Good Ifrit {self.visota}, {self.goodness}')
+    def __str__(self):    
+        return 'Good Ifrit {}, {}'.format(self.visota, self.goodness) 
+
+    #def vsvod(self):
+     #   print(f'Good Ifrit {self.visota}, {self.goodness}')
 
     def __gt__(self, other):
         return self > other
@@ -62,6 +65,6 @@ ignat.change_goodness(30)
 print(ignat.goodness)
 ignat.sloshenie(1)
 ignat.vozvr(10)
-ignat.vsvod()
+print(ignat.__str__())
 vitalik = GoodIfrit(17, 'Виталик', 70)
 ignat.srav(vitalik)
